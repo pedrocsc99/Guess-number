@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess game</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <header class="header">
+        <h1>Qual é o número?</h1>
+      </header>
+      <div class="central">
+        <h3 id="guessText" class="guess invisible">é menor</h3>
+        <div class="numbers">
+          <svg
+            viewBox="0 0 56 100"
+            id="firstNumber"
+            class="num-0 invisible"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="horizontal-top"
+              d="M13.6104 10.9839H43.4468L53.7694 1.18117C52.8139 0.442657 51.6186 2.47955e-05 50.3191 2.47955e-05H6.47695C5.18534 2.47955e-05 3.99945 0.436348 3.04712 1.16461L13.6104 10.9839Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-left"
+              d="M2.09081 2.0854C1.29706 3.05983 0.819702 4.30252 0.819702 5.65646V44.0181C0.819702 46.2171 2.07659 48.1186 3.90946 49.0544L12.5539 42.5758V11.8115L2.09081 2.0854Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-right"
+              d="M44.2413 12.0569V42.5758L52.8857 49.0544C54.7186 48.1186 55.9755 46.2171 55.9755 44.0181V5.65646C55.9755 4.31041 55.5037 3.07718 54.7202 2.1067L44.2413 12.0569Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-bottom"
+              d="M13.6104 89.0154H43.4468L53.7694 98.8188C52.8139 99.5558 51.6186 100 50.3191 100H6.47695C5.18534 100 3.99945 99.5621 3.04712 98.8338L13.6104 89.0154Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-left"
+              d="M2.09081 97.9131C1.29706 96.9395 0.819702 95.6976 0.819702 94.3428V55.9811C0.819702 53.7822 2.07659 51.8814 3.90946 50.9449L12.5539 57.4234V88.1878L2.09081 97.9131Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-right"
+              d="M44.2413 87.9423V57.4234L52.8857 50.9448C54.7186 51.8814 55.9755 53.7821 55.9755 55.9811V94.3428C55.9755 95.6881 55.5037 96.9213 54.7202 97.8933L44.2413 87.9423Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-middle"
+              d="M43.3711 43.9976H13.4242L5.44885 49.8765L13.4242 55.7562H24.8419H31.9533H43.3711L51.3464 49.8765L43.3711 43.9976Z"
+              fill="#DDDDDD"
+            />
+          </svg>
+          <svg
+            id="secondNumber"
+            class="num-0 invisible"
+            viewBox="0 0 56 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="horizontal-top"
+              d="M13.6104 10.9839H43.4468L53.7694 1.18117C52.8139 0.442657 51.6186 2.47955e-05 50.3191 2.47955e-05H6.47695C5.18534 2.47955e-05 3.99945 0.436348 3.04712 1.16461L13.6104 10.9839Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-left"
+              d="M2.09081 2.0854C1.29706 3.05983 0.819702 4.30252 0.819702 5.65646V44.0181C0.819702 46.2171 2.07659 48.1186 3.90946 49.0544L12.5539 42.5758V11.8115L2.09081 2.0854Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-right"
+              d="M44.2413 12.0569V42.5758L52.8857 49.0544C54.7186 48.1186 55.9755 46.2171 55.9755 44.0181V5.65646C55.9755 4.31041 55.5037 3.07718 54.7202 2.1067L44.2413 12.0569Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-bottom"
+              d="M13.6104 89.0154H43.4468L53.7694 98.8188C52.8139 99.5558 51.6186 100 50.3191 100H6.47695C5.18534 100 3.99945 99.5621 3.04712 98.8338L13.6104 89.0154Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-left"
+              d="M2.09081 97.9131C1.29706 96.9395 0.819702 95.6976 0.819702 94.3428V55.9811C0.819702 53.7822 2.07659 51.8814 3.90946 50.9449L12.5539 57.4234V88.1878L2.09081 97.9131Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-right"
+              d="M44.2413 87.9423V57.4234L52.8857 50.9448C54.7186 51.8814 55.9755 53.7821 55.9755 55.9811V94.3428C55.9755 95.6881 55.5037 96.9213 54.7202 97.8933L44.2413 87.9423Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-middle"
+              d="M43.3711 43.9976H13.4242L5.44885 49.8765L13.4242 55.7562H24.8419H31.9533H43.3711L51.3464 49.8765L43.3711 43.9976Z"
+              fill="#DDDDDD"
+            />
+          </svg>
+          <svg
+            id="thirdNumber"
+            class="num-0"
+            viewBox="0 0 56 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="horizontal-top"
+              d="M13.6104 10.9839H43.4468L53.7694 1.18117C52.8139 0.442657 51.6186 2.47955e-05 50.3191 2.47955e-05H6.47695C5.18534 2.47955e-05 3.99945 0.436348 3.04712 1.16461L13.6104 10.9839Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-left"
+              d="M2.09081 2.0854C1.29706 3.05983 0.819702 4.30252 0.819702 5.65646V44.0181C0.819702 46.2171 2.07659 48.1186 3.90946 49.0544L12.5539 42.5758V11.8115L2.09081 2.0854Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="upper-right"
+              d="M44.2413 12.0569V42.5758L52.8857 49.0544C54.7186 48.1186 55.9755 46.2171 55.9755 44.0181V5.65646C55.9755 4.31041 55.5037 3.07718 54.7202 2.1067L44.2413 12.0569Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-bottom"
+              d="M13.6104 89.0154H43.4468L53.7694 98.8188C52.8139 99.5558 51.6186 100 50.3191 100H6.47695C5.18534 100 3.99945 99.5621 3.04712 98.8338L13.6104 89.0154Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-left"
+              d="M2.09081 97.9131C1.29706 96.9395 0.819702 95.6976 0.819702 94.3428V55.9811C0.819702 53.7822 2.07659 51.8814 3.90946 50.9449L12.5539 57.4234V88.1878L2.09081 97.9131Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="botton-right"
+              d="M44.2413 87.9423V57.4234L52.8857 50.9448C54.7186 51.8814 55.9755 53.7821 55.9755 55.9811V94.3428C55.9755 95.6881 55.5037 96.9213 54.7202 97.8933L44.2413 87.9423Z"
+              fill="#DDDDDD"
+            />
+            <path
+              class="horizontal-middle"
+              d="M43.3711 43.9976H13.4242L5.44885 49.8765L13.4242 55.7562H24.8419H31.9533H43.3711L51.3464 49.8765L43.3711 43.9976Z"
+              fill="#DDDDDD"
+            />
+          </svg>
+        </div>
+        <button id="newMatch" class="newMatchButton invisible">
+          <img src="./Assets/refresh_24px.svg" /> Nova partida
+        </button>
+      </div>
+      <footer>
+        <input placeholder="Digite seu palpite" id="inputGuess" type="text" />
+        <button id="submitButton">Enviar</button>
+      </footer>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

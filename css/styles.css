@@ -1,0 +1,294 @@
+body {
+  background-image: linear-gradient(#eeeeee, #ffffff);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232525;
+}
+body > .content {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  max-height: 588px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+header {
+  margin-top: 62px;
+}
+header > h1 {
+  font-family: Montserrat;
+  font-size: clamp(1.5rem, 1.5rem + 0.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: -1px;
+  text-align: center;
+  color: #ff6600;
+  text-transform: uppercase;
+}
+body > .central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.central > h3 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+.central > .guess {
+  color: #ff6600;
+}
+.numbers svg {
+  width: clamp(3.375rem, 3.375rem + 1vw, 4.688rem);
+  height: clamp(6.125rem, 6.25rem + 1vh, 8.438rem);
+}
+.numbers {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+.numbers svg {
+  fill: rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease-in-out;
+}
+.numbers svg.num-1 .upper-right,
+.numbers svg.num-1 .botton-right,
+.numbers svg.num-2 .horizontal-top,
+.numbers svg.num-2 .upper-right,
+.numbers svg.num-2 .horizontal-bottom,
+.numbers svg.num-2 .botton-left,
+.numbers svg.num-2 .horizontal-middle,
+.numbers svg.num-3 .horizontal-top,
+.numbers svg.num-3 .botton-right,
+.numbers svg.num-3 .upper-right,
+.numbers svg.num-3 .horizontal-bottom,
+.numbers svg.num-3 .horizontal-middle,
+.numbers svg.num-4 .upper-left,
+.numbers svg.num-4 .upper-right,
+.numbers svg.num-4 .botton-right,
+.numbers svg.num-4 .horizontal-middle,
+.numbers svg.num-5 .horizontal-top,
+.numbers svg.num-5 .upper-left,
+.numbers svg.num-5 .horizontal-bottom,
+.numbers svg.num-5 .botton-right,
+.numbers svg.num-5 .horizontal-middle,
+.numbers svg.num-6 .horizontal-top,
+.numbers svg.num-6 .upper-left,
+.numbers svg.num-6 .horizontal-bottom,
+.numbers svg.num-6 .botton-left,
+.numbers svg.num-6 .botton-right,
+.numbers svg.num-6 .horizontal-middle,
+.numbers svg.num-7 .horizontal-top,
+.numbers svg.num-7 .upper-right,
+.numbers svg.num-7 .botton-right,
+.numbers svg.num-8 .horizontal-top,
+.numbers svg.num-8 .upper-left,
+.numbers svg.num-8 .upper-right,
+.numbers svg.num-8 .horizontal-bottom,
+.numbers svg.num-8 .botton-left,
+.numbers svg.num-8 .botton-right,
+.numbers svg.num-8 .horizontal-middle,
+.numbers svg.num-9 .horizontal-top,
+.numbers svg.num-9 .upper-left,
+.numbers svg.num-9 .upper-right,
+.numbers svg.num-9 .horizontal-bottom,
+.numbers svg.num-9 .botton-right,
+.numbers svg.num-9 .horizontal-middle,
+.numbers svg.num-0 .horizontal-top,
+.numbers svg.num-0 .upper-left,
+.numbers svg.num-0 .upper-right,
+.numbers svg.num-0 .horizontal-bottom,
+.numbers svg.num-0 .botton-left,
+.numbers svg.num-0 .botton-right {
+  fill: #262a34;
+}
+footer {
+  display: flex;
+  width: 100%;
+  max-width: 298px;
+  margin-bottom: 59px;
+  gap: 11px;
+}
+footer > input {
+  box-sizing: border-box;
+  border: 1px solid #ff6600;
+  height: 42px;
+  width: 217px;
+  border-radius: 4px;
+  padding-left: 12px;
+}
+footer > button {
+  height: 42px;
+  width: 70px;
+  border-radius: 4px;
+  background-color: #ef6c00;
+  color: #ffffff;
+  border: none;
+}
+.central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newMatchButton {
+  background-image: linear-gradient(#434854, #9e9e9e);
+  color: #ffffff;
+  height: 42px;
+  width: 130px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.newMatchButton img {
+  padding: 9px 2px 9px 6px;
+}
+.newMatchButton:hover {
+  cursor: pointer;
+}
+.segment-number .invisible {
+  display: none;
+}
+.invisible {
+  display: none;
+}
+.central > .correct {
+  color: #32bf00;
+}
+.numbers {
+  margin-top: 16px;
+  margin-bottom: 56px;
+}
+.numbers svg.num-1.correct .upper-right,
+.numbers svg.num-1.correct .botton-right,
+.numbers svg.num-2.correct .horizontal-top,
+.numbers svg.num-2.correct .upper-right,
+.numbers svg.num-2.correct .horizontal-bottom,
+.numbers svg.num-2.correct .botton-left,
+.numbers svg.num-2.correct .horizontal-middle,
+.numbers svg.num-3.correct .horizontal-top,
+.numbers svg.num-3.correct .botton-right,
+.numbers svg.num-3.correct .upper-right,
+.numbers svg.num-3.correct .horizontal-bottom,
+.numbers svg.num-3.correct .horizontal-middle,
+.numbers svg.num-4.correct .upper-left,
+.numbers svg.num-4.correct .upper-right,
+.numbers svg.num-4.correct .botton-right,
+.numbers svg.num-4.correct .horizontal-middle,
+.numbers svg.num-5.correct .horizontal-top,
+.numbers svg.num-5.correct .upper-left,
+.numbers svg.num-5.correct .horizontal-bottom,
+.numbers svg.num-5.correct .botton-right,
+.numbers svg.num-5.correct .horizontal-middle,
+.numbers svg.num-6.correct .horizontal-top,
+.numbers svg.num-6.correct .upper-left,
+.numbers svg.num-6.correct .horizontal-bottom,
+.numbers svg.num-6.correct .botton-left,
+.numbers svg.num-6.correct .botton-right,
+.numbers svg.num-6.correct .horizontal-middle,
+.numbers svg.num-7.correct .horizontal-top,
+.numbers svg.num-7.correct .upper-right,
+.numbers svg.num-7.correct .botton-right,
+.numbers svg.num-8.correct .horizontal-top,
+.numbers svg.num-8.correct .upper-left,
+.numbers svg.num-8.correct .upper-right,
+.numbers svg.num-8.correct .horizontal-bottom,
+.numbers svg.num-8.correct .botton-left,
+.numbers svg.num-8.correct .botton-right,
+.numbers svg.num-8.correct .horizontal-middle,
+.numbers svg.num-9.correct .horizontal-top,
+.numbers svg.num-9.correct .upper-left,
+.numbers svg.num-9.correct .upper-right,
+.numbers svg.num-9.correct .horizontal-bottom,
+.numbers svg.num-9.correct .botton-right,
+.numbers svg.num-9.correct .horizontal-middle,
+.numbers svg.num-0.correct .horizontal-top,
+.numbers svg.num-0.correct .upper-left,
+.numbers svg.num-0.correct .upper-right,
+.numbers svg.num-0.correct .horizontal-bottom,
+.numbers svg.num-0.correct .botton-left,
+.numbers svg.num-0.correct .botton-right {
+  fill: #32bf00;
+}
+.disabled {
+  color: #9e9e9e;
+  border-color: #cfcfcf;
+}
+.disabledButton {
+  background-color: #dddddd;
+  color: #ffffff;
+}
+.error {
+  color: #cc3300;
+}
+.numbers svg.num-1.error .upper-right,
+.numbers svg.num-1.error .botton-right,
+.numbers svg.num-2.error .horizontal-top,
+.numbers svg.num-2.error .upper-right,
+.numbers svg.num-2.error .horizontal-bottom,
+.numbers svg.num-2.error .botton-left,
+.numbers svg.num-2.error .horizontal-middle,
+.numbers svg.num-3.error .horizontal-top,
+.numbers svg.num-3.error .botton-right,
+.numbers svg.num-3.error .upper-right,
+.numbers svg.num-3.error .horizontal-bottom,
+.numbers svg.num-3.error .horizontal-middle,
+.numbers svg.num-4.error .upper-left,
+.numbers svg.num-4.error .upper-right,
+.numbers svg.num-4.error .botton-right,
+.numbers svg.num-4.error .horizontal-middle,
+.numbers svg.num-5.error .horizontal-top,
+.numbers svg.num-5.error .upper-left,
+.numbers svg.num-5.error .horizontal-bottom,
+.numbers svg.num-5.error .botton-right,
+.numbers svg.num-5.error .horizontal-middle,
+.numbers svg.num-6.error .horizontal-top,
+.numbers svg.num-6.error .upper-left,
+.numbers svg.num-6.error .horizontal-bottom,
+.numbers svg.num-6.error .botton-left,
+.numbers svg.num-6.error .botton-right,
+.numbers svg.num-6.error .horizontal-middle,
+.numbers svg.num-7.error .horizontal-top,
+.numbers svg.num-7.error .upper-right,
+.numbers svg.num-7.error .botton-right,
+.numbers svg.num-8.error .horizontal-top,
+.numbers svg.num-8.error .upper-left,
+.numbers svg.num-8.error .upper-right,
+.numbers svg.num-8.error .horizontal-bottom,
+.numbers svg.num-8.error .botton-left,
+.numbers svg.num-8.error .botton-right,
+.numbers svg.num-8.error .horizontal-middle,
+.numbers svg.num-9.error .horizontal-top,
+.numbers svg.num-9.error .upper-left,
+.numbers svg.num-9.error .upper-right,
+.numbers svg.num-9.error .horizontal-bottom,
+.numbers svg.num-9.error .botton-right,
+.numbers svg.num-9.error .horizontal-middle,
+.numbers svg.num-0.error .horizontal-top,
+.numbers svg.num-0.error .upper-left,
+.numbers svg.num-0.error .upper-right,
+.numbers svg.num-0.error .horizontal-bottom,
+.numbers svg.num-0.error .botton-left,
+.numbers svg.num-0.error .botton-right {
+  fill: #cc3300;
+}
